@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body{
+            background: url("photo/background.jpg") repeat;
+        }
+        /*img{
+            display: none;
+        }*/
+        .head1{
+            background: black;
+            height: 22px;
+        }
+        .head1_child1{
+            margin-left: 10%;
+            height: 50px;
+            width:150px;
+            display: inline-block;
+        }
+        .head1_child2{
+            float: right;
+            margin-right: 10%;
+            display: inline-block;
+        }
+        .head2{
+           /* border: 1px solid red;*/
+            height: 48px;
+            background-color: #001933;
+        }
+        .head2_child1{
+            margin-left: 25%;
+            margin-top: 10px;
+            font-weight: lighter;
+            color: white;
+        }
+        .li_title{
+            list-style-type: none;
+            float: left;
+            margin: 6px;
+        }
+
+        .head3_child1{
+            position: relative;
+        }
+        #title_text{
+            position: absolute;
+            left: 53%;
+            top: 25px;
+            font-weight:bolder;
+            font-size: 25px;
+            color: white;
+            letter-spacing: 8px;
+        }
+
+        /*.divs .imgs{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .divs .infos{
+            display: inline-block;          及时雨
+        }
+        <div class="divs">
+            <div class="imgs"><img src="photo/logo.png" alt=""></div>
+            <div class="infos"><a href="">找回密码</a></div>
+        </div>
+        */
+        .body1{
+            margin-top:13px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .body1_child1{
+            width: 130px;
+            height: 200px;
+            margin-left: 10%;
+            float: left;
+            background:#005580;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+        }
+        .body1_child1 span{
+            border-bottom: 1px gray solid ;
+            letter-spacing: 10px;
+            margin-top: 20px;
+        }
+        .body1_child1 li{
+            list-style-type: square;
+            letter-spacing: 2px;
+            height: 25px;
+            font-size:10px;
+        }
+        .body1_child2{
+            display: inline-block;
+            width: 450px;
+            height: 200px;
+            display: inline-block;
+            margin-left: 10px;
+            float: left;
+        }
+        /*#container {及时雨
+            width:400px;
+            height: 200px;
+            background-color: red;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        .lable {
+            width: 100px;
+            background-color: blue;
+            display: inline-block;
+        }*/
+        .body1_child3{
+            /*border: 1px solid red;*/
+            width: 150px;
+            height: 200px;
+            margin-right: 10%;
+            padding: 10px;
+            display: inline-block;
+        }
+        .body1_child3_div1{
+            font-weight: bolder;
+            border-bottom: 1px dodgerblue solid;
+            font-size: 12px;
+            color: black;
+            display: inline;
+        }
+        .body1_child3_div2{
+            border-bottom: 1px solid gray ;
+            font-size: 8px;
+            display: inline;
+            width: 50%;
+        }
+        .body1_child3_div3{
+          /* border: 1px solid red;*/
+            background: white;
+            padding-right: 5px;
+        }
+        .body1_child3_div3 li{
+            list-style-type:circle;
+            height: 30px;
+            font-size: 5px;
+        }
+
+        /*主体body2---------------------------------*/
+        .body2{
+            border: 1px solid red;
+            width: 770px;
+            height: 325px;
+            margin-left: 8%;
+            margin-top: 10px;
+            /*white-space: nowrap;*/
+
+        }
+        /*body2_child1*/
+       /* .body2_child1{
+            border: 1px solid red;
+            !*width: 765px;*!
+            width: 600px;
+            height: 40px;
+            white-space: nowrap;
+            background: #0077b3;
+            !*position: absolute;*!
+            padding-top: 10px;
+            padding-left: 5px;
+
+        }
+        .body2_child1_div1{
+            float: left;
+            font-weight: bolder;
+            color: white;
+            padding-top: 7px;
+            display: inline;
+        }
+        .body2_child1_button{
+            height: 25px;
+            text-align: center;
+            margin-left:25px;
+            display: inline;
+        }
+        .body2_child1_div2{
+            float:right;
+            font-weight: bolder;
+            color: white;
+            padding-right:7px;
+            padding-top: 7px;
+            display: inline;
+            margin-right:25%;
+        }*/
+        /*.body2_child1_div3{
+            border: 1px solid red;
+            width: 150px;
+            height: 325px;
+            float: right;
+            display:inline-block;
+            margin-right: 10%;
+        }*/
+
+        .body2_child1{
+            border: 1px solid red;
+            width: 765px;
+            height: 40px;
+            white-space: nowrap;
+            background: #0077b3;
+            padding-top: 10px;
+            padding-left: 5px;
+
+        }
+        .body2_child1_div1{
+            float: left;
+            font-weight: bolder;
+            color: white;
+            padding-top: 7px;
+            display: inline;
+        }
+        .body2_child1_button{
+            height: 25px;
+            text-align: center;
+            margin-left:15%;
+            display: inline;
+        }
+        .body2_child1_div2{
+            float:right;
+            font-weight: bolder;
+            color: white;
+            padding-right:7px;
+            padding-top: 7px;
+            display: inline;
+            margin-right:15%;
+        }
+
+
+        /*body2_child2------------*/
+        .body2_child2{
+            /*border: 1px solid black;*/
+            width: 765px;
+            height: 260px;
+            /*white-space: nowrap;*/
+            position: absolute;
+        }
+        .table1{
+            /*border: 1px greenyellow dashed;*/
+            width: 770px;
+            height: 275px;
+            background-color: white;
+        }
+        td{
+            /*border: 1px gray dashed;*/
+            padding: 5px;
+            width: 100px;
+            height: 40px;
+        }
+
+        .td_1{
+            width: 200px;
+        }
+        .tr_1{
+            padding: 0px;
+        }
+        .td_img{
+            height: 80px;
+        }
+        .td_3 {
+            border-bottom: 1px gray dashed;
+        }
+
+        /*body2_child2------------*/
+        /*.body2_child2{
+            !*border: 1px solid black;*!
+            width: 609px;
+            height: 260px;
+            !*white-space: nowrap;*!
+            position: absolute;
+        }
+        !*.body2_child2_div2{
+            border: 1px solid black;
+            width: 400px;
+            height:100px;
+            background-color:white;
+            !*display: inline;*!
+        }*!
+        table{
+            !*border: 1px greenyellow dashed;*!
+            width: 609px;
+            height: 275px;
+            background-color: white;
+        }
+        td{
+            !*border: 1px gray dashed;*!
+            padding: 5px;
+            width: 100px;
+            height: 40px;
+        }
+        !*table img{
+              float: left;
+         }
+        .img_2,img_3,img_4{
+            width:200px;
+            height:85px;
+            float:left;
+            margin-left:0px;
+        }*!
+        .td_1{
+            width: 200px;
+        }
+        .tr_1{
+            padding: 0px;
+        }
+        .td_img{
+            height: 80px;
+        }
+        .td_3 {
+            border-bottom: 1px gray dashed;
+        }*/
+        /*  width: 100%;
+            height: 100%;
+        }*/
+
+
+        .body3{
+            /*border: 1px solid red;*/
+            width: 770px;
+            /*height: 250px;*/
+            height: 290px;
+            margin-left: 8%;
+            margin-top: 40px;
+            overflow: hidden;
+            /*white-space: nowrap;*/
+        }
+         p {
+            font-weight: bolder;
+            color: cadetblue;
+            text-align: center;
+            font-size: 20px;
+        }
+        .body3_guide{
+            /*border: 1px solid red;*/
+            width: 150px;
+            height: 250px;
+            float: left;
+            background-color: white;
+            margin-left: 4px;
+        }
+
+        .guide_li{
+            float: left;
+            width: 60px;
+            font-size: 7px;
+        }
+        .guide_li2{
+            float: left;
+            width: 60px;
+            font-size: 7px;
+        }
+
+
+
+        .body4{
+            /*border: 1px solid red;*/
+            width: 770px;
+            height: 350px;
+            margin-left: 8%;
+            margin-top: 30px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .body4_child1 table{
+            width: 770px;
+            height: 340px;
+            /*position: relative;*/
+        }
+        .table_div{
+            position: relative;
+        }
+        .table_text{
+            position: absolute;
+            text-align: center;
+            bottom: 7px;
+            font-size: 5px;
+            color: white;
+        }
+        .body5{
+            /*border: 1px solid red;*/
+            width: 770px;
+            margin-left: 8%;
+            margin-top: 30px;
+            height: 300px;
+
+        }
+        .body5_child1{
+            /*border: 1px solid red;*/
+            text-align: center;
+            font-size: 5px;
+        }
+        .body5_child2{
+            width: 770px;
+            position: relative;
+        }
+        .img_gl{
+            width: 180px;
+            height: 180px;
+            /*margin-left: 5px;
+            overflow: hidden;*/
+        }
+        .body5_child2_div{
+            position: relative;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .body5_child2_span{
+            position: absolute;
+            text-align: center;
+            bottom: 10px;
+            font-size: 12px;
+            color: whitesmoke;
+            margin-left: 40px;
+            font-weight: bolder;
+        }
+        .foot{
+            margin-top: 30px;
+        }
+        .foot img{
+            width: 100%;
+            height: 120px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!--页眉部分-->
+    <header class="container-fluid">
+        <div class="row head1" >
+                <div class=" col-md-4 head1_child1">
+                    <img src="photo/logo.png" class="img-responsive" >
+                </div>
+                <div class="col-md-4 head1_child2">
+                    <a href="javascript:void(0)">英语&nbsp;</a>
+                    <a href="javascript:void(0)">日语&nbsp;</a>
+                    <a href="javascript:void(0)">韩语&nbsp;</a>
+                    <a href="javascript:void(0)">法语&nbsp;</a>
+                    <img src="photo/weather.PNG">
+                </div>
+        </div>
+        <div class=" row head2">
+            <div class="head2_child1">
+                <ul >
+                    <li class="li_title">首页</li>
+                    <li class="li_title">厦门概况</li>
+                    <li class="li_title">旅游资讯</li>
+                    <li class="li_title">景区</li>
+                    <li class="li_title">路线</li>
+                    <li class="li_title">美食</li>
+                    <li class="li_title">酒店</li>
+                    <li class="li_title">购物</li>
+                    <li class="li_title">交通</li>
+                    <li class="li_title">全域推广联盟</li>
+                    <li class="li_title">发现金门</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row head3">
+            <div class="head3_child1">
+                <span id="title_text">海上花园&nbsp&nbsp诗意厦门</span>
+                <img src="photo/title.jpg" class="img-responsive" >
+            </div>
+        </div>
+    </header>
+    <!--主题部分-->
+    <div class="container">
+        <div class="row body1">
+            <div class="col-md-3 body1_child1">
+                    <span>&nbsp&nbsp厦门旅游</span>
+                    <ul>
+                        <li>节庆活动</li>
+                        <li>会议展览</li>
+                        <li>旅游攻略</li>
+                        <li>旅游贴士</li>
+                        <li>图片</li>
+                        <li>视频</li>
+                        <li>美食</li>
+                    </ul>
+            </div> <!--厦门旅游-->
+
+            <div class="col-md-6 body1_child2">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="photo/lb_1.jfif" >
+                        </div>
+                        <div class="item">
+                            <img src="photo/lb_2.jfif" >
+                        </div>
+                        <div class="item">
+                            <img src="photo/lb_3.jfif" >
+                        </div>
+                        <!--<div class="item">
+                            <img src="photo/lb_4.jfif" >
+                        </div>
+                        <div class="item">
+                            <img src="photo/lb_5.jfif" >
+                        </div>-->
+                    </div>
+                    <!-- Controls -->
+                   <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </a>-->
+                </div>
+            </div>  <!--轮播图-->
+
+            <div class="col-md-3 body1_child3" >
+                <div class="body1_child3_div1" >
+                    最新资讯
+                </div>
+                <div class="body1_child3_div2">
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;
+                        更多资讯>
+                    </span>
+                </div>
+                <div class="body1_child3_div3">
+                    <ul>
+                        <li><a href="javascript:void (0)">厦门酒店婚宴优惠清单来了....</a></li>
+                        <li><a href="javascript:void (0)">好消息！厦门山海健康步道...</a></li>
+                        <li><a href="javascript:void (0)">厦门生态健康价值连城</a></li>
+                        <li><a href="javascript:void (0)">骑上单车，任由春风拂面....</a></li>
+                        <li><a href="javascript:void (0)">舌尖上的春天</a></li>
+                        <li><a href="javascript:void (0)">线上公益性商事调解</a></li>
+                    </ul>
+                </div>
+
+            </div>            <!--热门资讯-->
+
+        </div>      <!--//厦门旅游-->
+
+        <div class="row body2">
+            <div class="body2_child1">
+                <div class="body2_child1_div1">精品路线</div>
+                <div class="body2_child1_button">
+                    <button type="button" class="btn btn-warning">金砖雅游</button>
+                    <button type="button" class="btn btn-primary">夜游厦门</button>
+                    <button type="button" class="btn btn-success">鼓浪屿</button>
+                    <button type="button" class="btn btn-info">自驾游</button>
+                    <button type="button" class="btn btn-danger">周边游</button>
+                </div>
+                <div class="body2_child1_div2">
+                   <a href="javascript:void (0)"> 其他路线</a>
+                   <!-- <button type="button" class="btn btn-link"><b>其他路线</b></button>-->
+                </div>
+                <div class="body2_child1_div3">
+
+                </div>
+            </div>  <!--//精品路线111-->
+
+            <div class="body2_child2">       <!--//精品路线22-->
+                <div class="body2_child2_div1">
+                    <table class="table1">
+                    <tr>
+                        <td bgcolor=" #cce5ff" class="td_1">
+                            <i><b>01&nbsp;</b></i><b>古典建筑倘佯之旅</b><br>
+                            <a href="javascript:void (0)">
+                                这里荟聚了上千座中西合璧,风格各异的中外建筑，如海天堂构 黄荣远堂
+                            </a>
+                        </td>
+                        <td  class="td_3"><img src="photo/jp_2.jfif" class="img-responsive td_img"  ></td>
+                        <td colspan="2" class="td_3">
+                            <i><b>02&nbsp;</b></i><b>海上看厦门</b><br>
+                            <a href="javascript:void (0)">
+                                这是中国近代教育史上第一所由华侨创办的大学，也是中国跨世纪重点建设的一批高水平的大学之一
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="tr_1"><img src="photo/jp_1.jfif" class="img-responsive td_img1"></td>
+                        <td  class="td_3"><img class="td_img" src="photo/jp_3.jfif" class="img-responsive "></td>
+                        <td colspan="2" class="td_3" >
+                            <i><b>03&nbsp;</b></i><b>魅力时尚之旅</b><br>
+                            <a href="javascript:void (0)">
+                                厦门特区建设展、友好往来展、馆藏玉器展、厦门书画精品展
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ><img class="td_img" src="photo/jp_4.jfif" class="img-responsive"  ></td>
+                        <td colspan="2" >
+                            <em><b>04&nbsp;</b></em><b>文创艺术品鉴之旅</b><br>
+                            <a href="javascript:void (0)">
+                                厦门市博物馆是我国东南地区的一座重要的地方综合性博物馆，致力于我国东南地区特别是闽台两岸珍贵文化遗产的收藏
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>      <!--精品路线222-->
+
+        </div>       <!--//精品路线-->
+
+    </div>
+
+        <!--  <img src="photo/logo.png" class="img-responsive" >-->
+    <div class="container">
+        <div class="row body3">
+            <p>-----旅游向导-----</p>
+            <div class="body3_guide">
+                    <img src="photo/xd1.jfif" class="img-responsive">
+                <div class="body3_guide_child">
+                    <ul>
+                        <li class="guide_li"><a href="javascript:void(0)">5A景区</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">主题乐园</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">遗产古迹</a></li>
+                    </ul>
+                    <ul >
+                        <li class="guide_li2"><a href="javascript:void(0)">4A景区</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">文博科教</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">新24景</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="body3_guide">
+                <img src="photo/xd2.jfif" class="img-responsive">
+                <div class="body3_guide_child">
+                    <ul>
+                        <li class="guide_li"><a href="javascript:void(0)">金砖雅游</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">自驾游</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">厦门夜游</a></li>
+                    </ul>
+                    <ul >
+                        <li class="guide_li2"><a href="javascript:void(0)">周边游</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">文博科教</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">经典遗产</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="body3_guide">
+                <img src="photo/xd3.jfif" class="img-responsive">
+                <div class="body3_guide_child">
+                    <ul>
+                        <li class="guide_li"><a href="javascript:void(0)">地道美食</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">私房佳肴</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">海鲜排档</a></li>
+                    </ul>
+                    <ul >
+                        <li class="guide_li2"><a href="javascript:void(0)">午饭晚茶</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">养生素菜</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">经典小吃</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="body3_guide">
+                <img src="photo/xd4.jfif" class="img-responsive">
+                <div class="body3_guide_child">
+                    <ul>
+                        <li class="guide_li"><a href="javascript:void(0)">5星酒店</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">4星酒店</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">3星酒店</a></li>
+                    </ul>
+                    <ul >
+                        <li class="guide_li2"><a href="javascript:void(0)">高级酒店</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">周边名宿</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="body3_guide">
+                <img src="photo/xd5.jfif" class="img-responsive">
+                <div class="body3_guide_child">
+                    <ul>
+                        <li class="guide_li"><a href="javascript:void(0)">时尚商圈</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">特色街区</a></li>
+                        <li class="guide_li"><a href="javascript:void(0)">地道伴礼</a></li>
+                    </ul>
+                    <ul >
+                        <li class="guide_li2"><a href="javascript:void(0)">跨境海购</a></li>
+                        <li class="guide_li2"><a href="javascript:void(0)">离境退税</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>  <!--旅游向导-->
+
+        <div class="row body4">
+            <p>-----热门推荐-----</p>
+            <div class="body4_child1">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <div class="table_div">
+                                <span class="table_text">厦门园林植物园</span>
+                                <img src="photo/rm_1.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">梦幻海岸</span>
+                                <img src="photo/rm_2.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">云上厦门</span>
+                                <img src="photo/rm_3.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">日月谷温泉度假村</span>
+                                <img src="photo/rm_4.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">胡里山炮台</span>
+                                <img src="photo/rm_5.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">中山路</span>
+                                <img src="photo/rm_6.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">环岛路</span>
+                                <img src="photo/rm_7.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">诚毅科技探索中心</span>
+                                <img src="photo/rm_8.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table_div">
+                                <span class="table_text">黄花路</span>
+                                <img src="photo/rm_9.jfif" class="img-responsive" >
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>  <!--热门推荐-->
+
+        <div class="row body5">
+            <div class="body5_child1">
+                 <p>-----游记攻略-----</p>
+                <span font-size="5px">独行或同游,聪明的人与你在一起</span><br>
+                <a src="javascript(0)">MORE>></a>
+            </div>
+            <div class="body5_child2">
+                <div class="body5_child2_div">
+                    <span class="body5_child2_span">中西建筑 文化融合</span>
+                    <img src="photo/gl_1.jfif" alt="" class="img-circle img_gl">
+                </div>
+                <div class="body5_child2_div">
+                    <span class="body5_child2_span">集美极美 美奂伦绝 </span>
+                    <img src="photo/gl_2.jfif" alt="" class="img-circle img_gl">
+                </div>
+                <div class="body5_child2_div">
+                    <span class="body5_child2_span">尽显厦门文艺美</span>
+                    <img src="photo/gl_3.jfif" alt="" class="img-circle img_gl">
+                </div>
+                <div class="body5_child2_div">
+                    <span class="body5_child2_span">红砖建筑 田园风景</span>
+                    <img src="photo/gl_4.jfif" alt="" class="img-circle img_gl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--页脚部分-->
+    <footer class="container-fluid">
+        <div class="row foot">
+            <img src="photo/foot.PNG" class="img-responsive" >
+        </div>
+    </footer>
+</body>
+</html>
